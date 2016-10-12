@@ -1,0 +1,115 @@
+
+/* General Styles & Layout */
+/* ========================================================================== */
+html,
+body {
+  background-color: #1d1e20;
+  color: #eee7db;
+  /*overflow-x: hidden;*/
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+/*.inner {
+  padding: 0 11.25em;
+}*/
+
+/* Branding */
+/* ========================================================================== */
+.branding {
+  /*background-color: #ee594a;*/
+  background-color: blue;
+  margin: 0 0 0 -9999rem;
+  max-width: 864px;
+  padding: 0 0 0 9999rem;
+  width: 60%;
+}
+.branding_ratio {
+  align-items: center;
+  background-color: #ee594a;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.branding_ratio:before {
+  content: "";
+  float: left;
+  padding-bottom: 90%; /* Maintains aspect ratio 97h/108w = 0.89814815 */
+}
+.branding_ratio:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.branding_logo {
+  height: 100%;
+  padding: 0 20%;
+  text-align: center;
+  width: 100%;
+}
+.branding_logo img {
+  max-width: 504px;
+  width: 100%;
+}
+
+/* Communication (Newsletter & Twitter) */
+/* ========================================================================== */
+.communication {
+  /*background:
+    linear-gradient(
+      rgba(54, 54, 54, 0.75),
+      rgba(54, 54, 54, 0.75)
+    ),
+    url(../images/newsletter-bg.jpg) no-repeat;*/
+  /*background-size: cover;*/
+  display: flex;
+  flex-direction: column;
+  margin: 0 -9999rem 0 0;
+  padding: 0 9999rem 0 0;
+  position: relative;
+  width: 40%;
+}
+.communication:before {
+  content: "test";
+  /*background:
+    linear-gradient(
+      rgba(54, 54, 54, 0.75),
+      rgba(54, 54, 54, 0.75)
+    ),
+    url(../images/newsletter-bg.jpg) no-repeat;*/
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.newsletter {
+  overflow: auto;
+  padding: 0 78px;
+  text-align: center;
+}
+.twitter {
+  background-color: #006d86;
+  margin: auto -9999rem 0 0;
+  padding: 0 9999rem 0 0;
+  text-align: center;
+}
+
+/* Sponsors */
+/* ========================================================================== */
+.sponsors {
+  background-color: #1d1e20;
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+  width: 100%;
+}
+
+/* Override the default text selection color */
+/* ========================================================================== */
+::selection {
+  background: blue; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: blue; /* Gecko Browsers */
+}

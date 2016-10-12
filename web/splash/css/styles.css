@@ -1,0 +1,99 @@
+
+/* General Styles & Layout */
+/* ========================================================================== */
+html,
+body {
+  background-color: #1d1e20;
+  color: #eee7db;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/* Branding */
+/* ========================================================================== */
+.branding {
+  align-items: center;
+  background-color: #ee594a;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+  z-index: 0;
+}
+.branding:before {
+  background-color: #ee594a;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 9999em;
+  z-index: -1;
+}
+.logo {
+  padding: 16% 10vw;
+}
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+/* Communication (Newsletter & Twitter) */
+/* ========================================================================== */
+.communication {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 40%;
+  z-index: 0;
+}
+.js-background {
+  background:
+    linear-gradient(
+      rgba(54, 54, 54, 0.75),
+      rgba(54, 54, 54, 0.75)
+    ),
+    url(../images/newsletter-bg.jpg) no-repeat;
+  background-position: top bottom;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.newsletter {
+  flex: 1;
+  position: relative;
+}
+.twitter {
+  background-color: #006d86;
+  height: 118px;
+  margin: auto -9999rem 0 0;
+  padding: 0 9999rem 0 0;
+}
+
+/* Sponsors */
+/* ========================================================================== */
+.sponsors {
+  background-color: #1d1e20;
+  width: 100%;
+}
+.sponsors .inner {
+  padding: 0 0 0 10vw;
+}
+
+/* Responsive Styles */
+/* ========================================================================== */
+@media screen and (min-width: 1440px) {
+  .logo {
+    padding: 130px 180px 140px;
+  }
+  .sponsors .inner {
+    padding: 0 0 0 180px;
+  }
+}
