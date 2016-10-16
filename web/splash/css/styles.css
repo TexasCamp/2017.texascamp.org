@@ -1,3 +1,21 @@
+/* fonts */
+/* ========================================================================== */
+@font-face {
+    font-family: 'old_growthregular';
+    src: url('fonts/oldgrowth-regular-webfont.woff2') format('woff2'),
+         url('fonts/oldgrowth-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'sonder_sansblack';
+    src: url('fonts/sondersans-black-webfont.woff2') format('woff2'),
+         url('fonts/sondersans-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* General Styles & Layout */
 /* ========================================================================== */
@@ -6,6 +24,17 @@ body {
   background-color: #1d1e20;
   color: #eee7db;
   overflow-x: hidden;
+}
+h2 {
+  font-family: 'old_growthregular', Arial, sans-serif;
+  text-transform: lowercase;
+  font-size: 55px;
+  letter-spacing: 10px;
+}
+p {
+  font-family: 'sonder_sansblack', Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.4;
 }
 .container {
   display: flex;
@@ -70,6 +99,14 @@ body {
   flex: 1;
   position: relative;
 }
+.newsletter p {
+  margin: 0 auto;
+  padding: 1em 0;
+  border-style: solid;
+  border-color: #eee7db;
+  border-width: 4px 0;
+  width: 75%;
+}
 .twitter {
   background-color: #006d86;
   height: 118px;
@@ -85,6 +122,29 @@ body {
 }
 .sponsors .inner {
   padding: 0 0 0 10vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+.sponsors h2 {
+  width: 100%;
+}
+.sponsors p {
+  line-height: 1.6;
+  flex: 2;
+}
+.sponsors .prospectus {
+  flex: 1;
+  text-align: center;
+}
+.sponsors .prospectus span {
+  font-family: "cubano";
+  font-size: 20px;
+  letter-spacing: 8px;
+  display: block;
+}
+.sponsors .prospectus img {
+  margin: 20px;
+  width: 86px;
 }
 
 /* Responsive Styles */
