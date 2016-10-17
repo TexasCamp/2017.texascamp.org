@@ -28,12 +28,13 @@ body {
 h2 {
   font-family: 'old_growthregular', Arial, sans-serif;
   text-transform: lowercase;
-  font-size: 55px;
-  letter-spacing: 10px;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0.5em 0;
 }
 p {
   font-family: 'sonder_sansblack', Arial, sans-serif;
-  font-size: 27px;
+  font-size: 25px;
   line-height: 1.4;
 }
 .container {
@@ -98,14 +99,67 @@ p {
 .newsletter {
   flex: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .newsletter p {
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 0.9em 0;
   border-style: solid;
   border-color: #eee7db;
-  border-width: 4px 0;
+  border-width: 2px 0;
   width: 75%;
+  letter-spacing: 1px;
+}
+.newsletter .mc_form {
+  width: 75%;
+  margin: 2em auto 4.8em auto;
+}
+.newsletter .mc_form .mc-field-group {
+  position: relative;
+}
+.newsletter .mc_form input[type="email"] {
+  background-color: #eee7db;
+  border-radius: 5px;
+  border: 0;
+  padding: 0;
+  color: #006d86;
+  font-family: "cubano";
+  font-size: 19px;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+.newsletter .mc_form input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #006d86;
+}
+.newsletter .mc_form input[type="email"]::-moz-placeholder { /* Firefox 19+ */
+  color: #006d86;
+}
+.newsletter .mc_form input[type="email"]:-ms-input-placeholder { /* IE 10+ */
+  color: #006d86;
+}
+.newsletter .mc_form input[type="email"]:-moz-placeholder { /* Firefox 18- */
+  color: #006d86;
+}
+.newsletter .mc_form button[type="submit"] {
+  position: absolute;
+  right: -25px;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #ee594a;
+  border: 0;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.newsletter .mc_form button[type="submit"] img {
+  margin: 14px 19px; /* Center image in button */
 }
 .twitter {
   background-color: #006d86;
