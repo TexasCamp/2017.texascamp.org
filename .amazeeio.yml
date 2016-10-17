@@ -3,4 +3,4 @@ sitegroup: 2017_texascamp_org
 shared:
   production:
     - src: files
-      dst: sites/default/files
+      dst: web/sites/default/files
