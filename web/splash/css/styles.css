@@ -64,11 +64,12 @@ p {
   height: 100%;
   position: absolute;
   right: 0;
+  top: 0;
   width: 9999em;
   z-index: -1;
 }
 .logo {
-  padding: 16% 10vw;
+  padding: 10vw;
 }
 .logo img {
   display: block;
@@ -97,6 +98,7 @@ p {
   height: 100%;
   position: absolute;
   left: 0;
+  top: 0;
 }
 .newsletter {
   flex: 1;
@@ -225,7 +227,7 @@ p {
   }
 }
 
-@media screen and (max-width: 1207px) {
+@media screen and (max-width: 1222px) {
   h2 {
     font-size: 40px;
   }
@@ -237,7 +239,7 @@ p {
   }
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 994px) {
   h2 {
     font-size: 32px;
   }
@@ -252,7 +254,7 @@ p {
   }
 }
 
-@media screen and (max-width: 797px) {
+@media screen and (max-width: 812px) {
   h2 {
     font-size: 25px;
   }
@@ -320,7 +322,7 @@ p {
     display: none;
   }
   .logo {
-    padding: 5% 20vw;
+    padding: 5vw 20vw;
   }
   .communication {
     display: block;
@@ -342,6 +344,9 @@ p {
   .sponsors .prospectus img {
     width: 146.5px;
     background-size: 146.5px;
+  }
+  .sponsors .prospectus {
+    margin-top: 3em;
   }
   .sponsors .inner {
     display: block;
