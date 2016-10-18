@@ -126,7 +126,7 @@ p {
   background-color: #eee7db;
   border-radius: 5px;
   border: 0;
-  padding: 0;
+  padding: 0 30px 0 5px;
   color: #006d86;
   font-family: "cubano";
   font-size: 19px;
@@ -264,6 +264,7 @@ p {
   .mc_form input[type="email"] {
     font-size: 10px;
     height: 40px;
+    padding-right: 18px;
   }
   .mc_form button[type="submit"] {
     width: 30px;
@@ -303,6 +304,7 @@ p {
   .mc_form input[type="email"] {
     font-size: 19px;
     height: 60px;
+    padding-right: 30px;
   }
   .mc_form button[type="submit"] {
     width: 50px;
@@ -405,6 +407,7 @@ p {
   .mc_form input[type="email"] {
     font-size: 10px;
     height: 40px;
+    padding-right: 18px;
   }
   .mc_form button[type="submit"] {
     width: 30px;
