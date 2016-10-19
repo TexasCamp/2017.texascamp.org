@@ -235,7 +235,7 @@ p {
     font-size: 20px;
   }
   .mc_form input[type="email"] {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -262,7 +262,6 @@ p {
     font-size: 13px;
   }
   .mc_form input[type="email"] {
-    font-size: 10px;
     height: 40px;
     padding-right: 18px;
   }
@@ -378,7 +377,7 @@ p {
     padding: 10vw;
   }
   .mc_form input[type="email"] {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -388,9 +387,6 @@ p {
   }
   p {
     font-size: 16px;
-  }
-  .mc_form input[type="email"] {
-    font-size: 12px;
   }
 }
 
@@ -405,7 +401,6 @@ p {
     margin-bottom: 3em;
   }
   .mc_form input[type="email"] {
-    font-size: 10px;
     height: 40px;
     padding-right: 18px;
   }
