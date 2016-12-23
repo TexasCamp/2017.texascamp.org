@@ -42,19 +42,20 @@ if(getenv('AMAZEEIO_SITENAME')){
 // WARNING: you have to create a search_api server having "solr" machine name at
 // /admin/config/search/search-api/add-server to make this work.
 if (getenv('AMAZEEIO_SOLR_HOST') && getenv('AMAZEEIO_SOLR_PORT')) {
-  $config['search_api.server.solr']['backend_config']['host'] = getenv('AMAZEEIO_SOLR_HOST');
-  $config['search_api.server.solr']['backend_config']['path'] = '/solr/' . (getenv('AMAZEEIO_SOLR_CORE') ?: getenv('AMAZEEIO_SITENAME')) . '/';
-  $config['search_api.server.solr']['backend_config']['port'] = getenv('AMAZEEIO_SOLR_PORT');
-  $config['search_api.server.solr']['backend_config']['http_user'] = (getenv('AMAZEEIO_SOLR_USER') ?: '');
-  $config['search_api.server.solr']['backend_config']['http']['http_user'] = (getenv('AMAZEEIO_SOLR_USER') ?: '');
-  $config['search_api.server.solr']['backend_config']['http_pass'] = (getenv('AMAZEEIO_SOLR_PASSWORD') ?: '');
-  $config['search_api.server.solr']['backend_config']['http']['http_pass'] = (getenv('AMAZEEIO_SOLR_PASSWORD') ?: '');
+  $config['search_api.server.solr']['backend_config']['connector_config']['host'] = getenv('AMAZEEIO_SOLR_HOST');
+  $config['search_api.server.solr']['backend_config']['connector_config']['path'] = '/solr/';
+  $config['search_api.server.solr']['backend_config']['connector_config']['core'] = getenv('AMAZEEIO_SOLR_CORE') ?: getenv('AMAZEEIO_SITENAME');
+  $config['search_api.server.solr']['backend_config']['connector_config']['port'] = getenv('AMAZEEIO_SOLR_PORT');
+  $config['search_api.server.solr']['backend_config']['connector_config']['http_user'] = (getenv('AMAZEEIO_SOLR_USER') ?: '');
+  $config['search_api.server.solr']['backend_config']['connector_config']['http']['http_user'] = (getenv('AMAZEEIO_SOLR_USER') ?: '');
+  $config['search_api.server.solr']['backend_config']['connector_config']['http_pass'] = (getenv('AMAZEEIO_SOLR_PASSWORD') ?: '');
+  $config['search_api.server.solr']['backend_config']['connector_config']['http']['http_pass'] = (getenv('AMAZEEIO_SOLR_PASSWORD') ?: '');
   $config['search_api.server.solr']['name'] = 'AmazeeIO Solr - Environment: ' . getenv('AMAZEEIO_SITE_ENVIRONMENT');
 }
 
 ### amazee.io Varnish & Reverse proxy settings
 if (getenv('AMAZEEIO_VARNISH_HOSTS') && getenv('AMAZEEIO_VARNISH_SECRET')) {
-  $varnish_hosts = explode(getenv('AMAZEEIO_VARNISH_HOSTS'), ',');
+  $varnish_hosts = explode(',', getenv('AMAZEEIO_VARNISH_HOSTS'));
   array_walk($varnish_hosts, function(&$value, $key) { $value .= ':6082'; });
 
   $settings['reverse_proxy'] = TRUE;
@@ -104,10 +105,10 @@ if(getenv('AMAZEEIO_SITE_ENVIRONMENT')){
 }
 
 // Last: this servers specific settings files.
-if (file_exists(__DIR__ . '/settings.local.php')) {
-  include __DIR__ . '/settings.local.php';
+if (file_exists(__DIR__ . '/local.settings.php')) {
+  include __DIR__ . '/local.settings.php';
 }
 // Last: This server specific services file.
-if (file_exists(__DIR__ . '/services.local.yml')) {
-  $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
+if (file_exists(__DIR__ . '/local.services.yml')) {
+  $settings['container_yamls'][] = __DIR__ . '/local.services.yml';
 }

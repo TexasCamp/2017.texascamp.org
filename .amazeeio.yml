@@ -1,5 +1,17 @@
 sitegroup: 2017_texascamp_org
-
+deploy_tasks:
+  development:
+    before_deploy:
+      - composer install
+    after_deploy:
+      - cd $AMAZEEIO_WEBROOT && drush -y updb --cache-clear=0
+      - cd $AMAZEEIO_WEBROOT && drush -y cr
+  production:
+    before_deploy:
+      - composer install -o --prefer-dist
+    after_deploy:
+      - cd $AMAZEEIO_WEBROOT && drush -y updb --cache-clear=0
+      - cd $AMAZEEIO_WEBROOT && drush -y cr
 shared:
   production:
     - src: files
