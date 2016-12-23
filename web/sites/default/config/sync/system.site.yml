@@ -1,0 +1,14 @@
+uuid: 0cdf743e-3287-40d0-bae3-0ca610162b07
+name: Site-Install
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
