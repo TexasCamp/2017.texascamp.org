@@ -1,0 +1,450 @@
+/* fonts */
+/* ========================================================================== */
+@font-face {
+    font-family: 'old_growthregular';
+    src: url('fonts/oldgrowth-regular-webfont.woff2') format('woff2'),
+         url('fonts/oldgrowth-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'sonder_sansblack';
+    src: url('fonts/sondersans-black-webfont.woff2') format('woff2'),
+         url('fonts/sondersans-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* General Styles & Layout */
+/* ========================================================================== */
+html,
+body {
+  background-color: #1d1e20;
+  color: #eee7db;
+  overflow-x: hidden;
+}
+h2 {
+  font-family: 'old_growthregular', Arial, sans-serif;
+  text-transform: lowercase;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 0.5em 0;
+  position: relative;
+}
+p {
+  font-family: 'sonder_sansblack', Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  position: relative;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/* Branding */
+/* ========================================================================== */
+.branding {
+  align-items: center;
+  background-color: #ee594a;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+  z-index: 0;
+}
+.branding:before {
+  background-color: #ee594a;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 9999em;
+  z-index: -1;
+}
+.logo {
+  padding: 10vw;
+}
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+/* Communication (Newsletter & Twitter) */
+/* ========================================================================== */
+.communication {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 40%;
+  z-index: 0;
+}
+.js-background {
+  background:
+    linear-gradient(
+      rgba(54, 54, 54, 0.75),
+      rgba(54, 54, 54, 0.75)
+    ),
+    url(../images/newsletter-bg.jpg) no-repeat;
+  background-position: top bottom;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.newsletter {
+  background:
+    linear-gradient(
+      rgba(54, 54, 54, 0.75),
+      rgba(54, 54, 54, 0.75)
+    ),
+    url(../images/newsletter-bg.jpg) no-repeat;
+  background-position: top bottom;
+  background-size: cover;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.newsletter p {
+  margin: 0 auto;
+  padding: 0.9em 0;
+  border-style: solid;
+  border-color: #eee7db;
+  border-width: 2px 0;
+  width: 75%;
+}
+.mc_form {
+  width: 75%;
+  margin: 2em auto 4.8em auto;
+}
+.mc_form .mc-field-group {
+  position: relative;
+}
+.mc_form .mc-field-group label {
+  position: absolute;
+  left: -5000px;
+}
+.mc_form #mce-error-response {
+  display:none;
+}
+.mc_form #mce-success-response {
+  display: none;
+}
+.mc_form input[type="text"] {
+  position: absolute;
+  left: -5000px;
+}
+.mc_form input[type="email"] {
+  background-color: #eee7db;
+  border-radius: 5px;
+  border: 0;
+  padding: 0 30px 0 5px;
+  color: #006d86;
+  font-family: "cubano";
+  font-size: 19px;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+.mc_form input[type="email"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #006d86;
+}
+.mc_form input[type="email"]::-moz-placeholder { /* Firefox 19+ */
+  color: #006d86;
+}
+.mc_form input[type="email"]:-ms-input-placeholder { /* IE 10+ */
+  color: #006d86;
+}
+.mc_form input[type="email"]:-moz-placeholder { /* Firefox 18- */
+  color: #006d86;
+}
+.mc_form button[type="submit"] {
+  position: absolute;
+  right: -25px;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #ee594a;
+  border: 0;
+  border-radius: 3px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.mc_form button[type="submit"] img {
+  margin: 14px 19px; /* Center image in button */
+}
+.twitter {
+  background-color: #006d86;
+  height: 118px;
+  margin: auto -9999rem 0 0;
+  padding: 0 9999rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sponsors */
+/* ========================================================================== */
+.sponsors {
+  background-color: #1d1e20;
+  width: 100%;
+}
+.sponsors .inner {
+  padding: 7% 0 7% 10vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+.sponsors h2 {
+  width: 100%;
+}
+.sponsors p {
+  line-height: 1.6;
+  width: 66%;
+}
+.sponsors .prospectus {
+  width: 33%;
+  text-align: center;
+}
+.sponsors .prospectus a {
+  background-image: url('../images/sponsor-prospectus-text.png');
+  background-position: center top;
+  background-size: 140.5px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.sponsors .prospectus img {
+  width: 146.5px;
+  background: no-repeat url('../images/download-circle-bg.png') center center;
+  background-size: 146.5px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: block;
+}
+
+/* Responsive Styles */
+/* ========================================================================== */
+@media screen and (min-width: 1440px) {
+  .logo {
+    padding: 130px 180px 140px;
+  }
+  .sponsors .inner {
+    padding: 100px 0 100px 180px;
+  }
+}
+
+@media screen and (max-width: 1222px) {
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .mc_form input[type="email"] {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 994px) {
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .mc_form {
+    margin-bottom: 3em;
+  }
+  .mc_form input[type="email"] {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .mc_form input[type="email"] {
+    height: 40px;
+    padding-right: 18px;
+  }
+  .mc_form button[type="submit"] {
+    width: 30px;
+    height: 30px;
+    right: -15px;
+  }
+  .mc_form button[type="submit"] img {
+    margin: 4px 9px; /* Center image in button */
+  }
+  .twitter {
+    height: 80px;
+  }
+  .twitter img {
+    width: 30px;
+  }
+  .sponsors .prospectus a {
+    background-size: 100px;
+  }
+  .sponsors .prospectus img {
+    width: 100px;
+    background-size: 100px;
+  }
+}
+
+/* iPad in portrait */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 50px;
+    margin: 1em 0;
+  }
+  p {
+    font-size: 25px;
+  }
+  .mc_form {
+    margin-bottom: 4em;
+  }
+  .mc_form input[type="email"] {
+    font-size: 19px;
+    height: 60px;
+    padding-right: 30px;
+  }
+  .mc_form button[type="submit"] {
+    width: 50px;
+    height: 50px;
+    right: -25px;
+  }
+  .mc_form button[type="submit"] img {
+    margin: 14px 19px; /* Center image in button */
+  }
+  .container {
+    display: block;
+  }
+  .branding {
+    width: 100%;
+  }
+  .branding:before {
+    display: none;
+  }
+  .logo {
+    padding: 5vw 20vw;
+  }
+  .communication {
+    display: block;
+    width: 100%;
+  }
+  .js-background {
+    background-position: center center;
+    z-index: 0;
+  }
+  .twitter {
+    height: 118px;
+  }
+  .twitter img {
+    width: 45px;
+  }
+  .sponsors .prospectus a {
+    background-size: 140.5px;
+  }
+  .sponsors .prospectus img {
+    width: 146.5px;
+    background-size: 146.5px;
+  }
+  .sponsors .prospectus {
+    margin-top: 3em;
+    width: 100%;
+  }
+  .sponsors .inner {
+    display: block;
+    width: 75%;
+    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sponsors h2 {
+    margin: 0 0 1em 0;
+  }
+  .sponsors p {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .logo {
+    padding: 10vw;
+  }
+  .mc_form input[type="email"] {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .mc_form {
+    margin-bottom: 3em;
+  }
+  .mc_form input[type="email"] {
+    height: 40px;
+    padding-right: 18px;
+  }
+  .mc_form button[type="submit"] {
+    width: 30px;
+    height: 30px;
+    right: -15px;
+  }
+  .mc_form button[type="submit"] img {
+    margin: 4px 9px; /* Center image in button */
+  }
+  .twitter {
+    height: 80px;
+  }
+  .twitter img {
+    width: 30px;
+  }
+  .sponsors .prospectus a {
+    background-size: 100px;
+  }
+  .sponsors .prospectus img {
+    width: 100px;
+    background-size: 100px;
+  }
+}
