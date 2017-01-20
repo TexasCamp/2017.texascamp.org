@@ -37,3 +37,4 @@ services:
     network_mode: bridge
     ports:
       - "3306"
+      - "3000"
