@@ -25,20 +25,10 @@
     "build": "NODE_ENV=production webpack -p",
     "start": "webpack-dev-server",
     "start-debug": "webpack --display-error-details",
-    "test": "ava -v",
-    "test-watch": "npm run test -- -w",
-    "view-coverage": "nyc report --reporter=html ava && open ./coverage/index.html",
-    "check-coverage": "nyc --check-coverage --lines 100 --functions 100 --branches 100 npm test",
-    "watch-coverage": "nodemon --quiet --watch src --watch test --exec npm run check-coverage -s",
-    "lint-code": "eslint .",
-    "lint-writing": "write-good *.md && alex",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "quality": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
-    "write-readme": "emdaer",
+    "lint-code": "eslint ./web/themes/texascamp-react/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "precommit": "npm run lint-code && npm run lint-writing",
-    "prepush": "npm run check-coverage"
+    "precommit": "npm run lint-code"
   },
   "ava": {
     "babel": "inherit",
@@ -69,9 +59,7 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.5.2",
-    "alex": "^3.1.0",
     "autoprefixer": "^6.3.7",
-    "ava": "^0.17.0",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
@@ -83,10 +71,7 @@
     "babel-preset-stage-2": "^6.5.0",
     "babel-preset-stage-3": "^6.5.0",
     "babel-register": "^6.14.0",
-    "codeclimate-test-reporter": "^0.3.3",
-    "codecov": "^1.0.1",
     "css-loader": "^0.23.1",
-    "emdaer": "^0.3.3",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.1",
@@ -102,7 +87,6 @@
     "json-loader": "^0.5.4",
     "node-sass": "^3.8.0",
     "nodemon": "^1.10.2",
-    "nyc": "^10.0.0",
     "postcss-loader": "^0.9.1",
     "react-addons-test-utils": "^15.3.1",
     "redux-ava": "^2.1.0",
@@ -114,7 +98,6 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
-    "write-good": "^0.9.1",
     "yaml-loader": "^0.4.0"
   }
 }
