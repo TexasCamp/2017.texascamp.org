@@ -1,0 +1,103 @@
+{
+  "name": "2017.texascamp.org",
+  "version": "1.0.0",
+  "description": "2017 TexasCamp",
+  "main": "web/themes/texascamp-react/index.js",
+  "repository": "git@github.com:TexasCamp/2017.texascamp.org.git",
+  "author": "ADUG",
+  "contributors": [
+    {
+      "name": "Chris",
+      "email": "ccjjmartin@gmail.com",
+      "url": "https://github.com/ccjjmartin"
+    },
+    {
+      "name": "Brandon",
+      "email": "rocketeerbkw@gmail.com",
+      "url": "https://github.com/rocketeerbkw"
+    }
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p",
+    "start": "webpack-dev-server",
+    "start-debug": "webpack --display-error-details",
+    "lint-code": "eslint ./web/themes/texascamp-react/",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "precommit": "npm run lint-code"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "./test/helpers/dom.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TexasCamp/2017.texascamp.org.git"
+  },
+  "domains": [
+    "http://2017.texascamp.org/"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "classnames": "^2.2.5",
+    "compass-mixins": "^0.12.10",
+    "enzyme": "^2.6.0",
+    "file-loader": "^0.9.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "sass-toolkit": "^2.10.0",
+    "singularitygs": "^1.7.0"
+  },
+  "devDependencies": {
+    "@kadira/storybook": "^2.5.2",
+    "autoprefixer": "^6.3.7",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "favicons-webpack-plugin": "0.0.7",
+    "html-webpack-plugin": "^2.19.0",
+    "husky": "^0.12.0",
+    "imagemin-webpack-plugin": "^1.4.4",
+    "js-cookie": "^2.1.3",
+    "jsdom": "^9.5.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.2",
+    "postcss-loader": "^0.9.1",
+    "react-addons-test-utils": "^15.3.1",
+    "redux-ava": "^2.1.0",
+    "redux-mock-store": "^1.2.1",
+    "resolve-url-loader": "^1.4.4",
+    "sass-loader": "^4.0.0",
+    "sinon": "^1.17.6",
+    "style-ext-html-webpack-plugin": "^3.0.5",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "yaml-loader": "^0.4.0"
+  }
+}
