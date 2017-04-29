@@ -1,0 +1,6 @@
+services:
+  txc_graphql.schema_provider.section_by_name:
+    class: Drupal\txc_graphql\SchemaProvider\SectionByNameSchemaProvider
+    arguments: ['@typed_data_manager', '@graphql.type_resolver']
+    tags:
+      - { name: graphql_schema_provider }

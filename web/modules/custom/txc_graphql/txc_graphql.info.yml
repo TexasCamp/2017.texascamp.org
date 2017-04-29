@@ -1,0 +1,6 @@
+name: TxCamp GraphQL
+type: module
+description: GraphQL schema for Texas Camp React frontend
+core: 8.x
+dependencies:
+  - graphql
