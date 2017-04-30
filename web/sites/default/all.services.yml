@@ -18,6 +18,7 @@ parameters:
       - 'http://texascamp2017.prod.appuio.amazee.io'
       - 'http://2017.texascamp.org'
       - 'http://texascamp2017.dev.appuio.amazee.io'
+      - 'http://texascamp2017.graphql.appuio.amazee.io'
       - 'http://localhost:8080'
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
